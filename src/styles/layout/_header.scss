@@ -1,0 +1,15 @@
+.header { 
+    height: 100px;
+    width:100vw;
+    border: 2px solid red;
+    display: flex;
+    flex-flow: row-nowrap;
+    justify-content: space-between;
+
+}
+.header .main-logo { 
+    height: 70px;
+    width: auto;
+    
+    
+}
