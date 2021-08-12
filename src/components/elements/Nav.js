@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
-import '../../styles/layout/_nav.scss'
+// import '../../styles/layout/_nav.scss'  // <= ! err if imported
 
 export class Nav extends Component {
     render() {
         return (
-            <div className='nav-wrapper'>
+            <div className='topnav-wrapper'>
                 <nav className='top-nav'>
                     <li>
                         <a className='nav-link link-home' href='#home'>Accueil</a>

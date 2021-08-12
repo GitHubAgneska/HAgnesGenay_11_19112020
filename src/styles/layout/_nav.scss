@@ -1,15 +1,18 @@
-
 /* ================================== */
-/* Nav */
+/* Top Nav */
 /* ================================== */
 
-.nav-wrapper {
+.topnav-wrapper {
+    border: 2px solid grey;
     width: 265px;
-}
 
-.top-nav li { list-style: none; display: inline;}
+    .top-nav {
+        li {
+            display: inline;
 
-.top-nav li a {
-    text-decoration: none;
-    color: red
+            a {
+                color: $orange-main;
+            }
+        }
+    }
 }

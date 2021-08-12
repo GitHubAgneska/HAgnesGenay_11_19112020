@@ -3,18 +3,20 @@
 /* Header */
 /* ================================== */
 
-.header { 
+.header-wrapper { 
     height: 100px;
     width:100vw;
     border: 2px solid red;
-    display: flex;
-    flex-flow: row-nowrap;
-    justify-content: space-between;
-
-}
-.header .main-logo { 
-    height: 70px;
-    width: auto;
-    
-    
+    .header {
+        @include flex(row, nowrap);
+        justify-content: space-between;
+        align-items: center;
+        &__logo-wrapper {
+            border: 2px solid blue;
+            @include min-1200px {
+                width: 13.125em; //240px;
+            }
+            .main-logo{ height: 4.375em; }// 70px;
+        }
+    }
 }
