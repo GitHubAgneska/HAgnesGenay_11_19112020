@@ -1,0 +1,8 @@
+.homepage-banner-wrapper {
+    height:225px;
+    margin-top:60px;margin-bottom: 40px;
+    background-image: url('../../assets/imgs/gustavo-alves-YOXSC4zRcxw-unsplash\ 1.png');
+    background-position: center;
+    @include centered;
+    h1 {color: $white;}
+}

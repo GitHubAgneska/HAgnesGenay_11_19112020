@@ -6,8 +6,8 @@ export class Footer extends Component {
     render() {
         return(
             <div className="footer-wrapper">
-                <footer id="footer" class="footer" role="contentinfo">
-                    <div id="footer__logo-wrapper" class="footer__logo-wrapper" tabindex="0">
+                <footer id="footer" className="footer" role="contentinfo">
+                    <div id="footer__logo-wrapper" className="footer__logo-wrapper" tabIndex="0">
                         <a href="#home" aria-label="Kasa Home page"><img src={logo_white} alt="logo" className="main-logo"/></a>
                     </div>
                     <div className="footer__credentials">
