@@ -1,4 +1,5 @@
 .homepage-banner-wrapper {
+    @include border-radius(10px);
     height:225px;
     margin-top:60px;margin-bottom: 40px;
     background-image: url('../../assets/imgs/gustavo-alves-YOXSC4zRcxw-unsplash\ 1.png');
