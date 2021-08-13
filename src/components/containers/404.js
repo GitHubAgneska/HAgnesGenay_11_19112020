@@ -1,4 +1,4 @@
-import { notFound } from "../../assets/imgs/notFound-L.png"
+import notFound from "../../assets/imgs/notFound.png"
 
 const NotFoundPage =  () => {
     

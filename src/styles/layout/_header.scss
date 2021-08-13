@@ -2,10 +2,12 @@
 /* Header */
 /* ================================== */
 
-.header-wrapper { 
+.header-wrapper {
+    position: fixed;
     height: 100px;
     width:100vw;
     border: 2px solid red;
+    background-color: $white;
     .header {
         @include flex(row, nowrap);
         justify-content: space-between;

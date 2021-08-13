@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import Nav from '../elements/Nav'
 import  logo from '../../assets/logos/logo.png'
-// import '../../styles/layout/_header.scss';
 
 
 export class Header extends Component {

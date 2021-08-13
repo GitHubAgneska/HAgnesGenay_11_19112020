@@ -8,7 +8,6 @@ export class Home extends React.Component {
             <div id="homepage" className="homepage-wrapper page">
                 <HomeBanner />
                 <Gallery />
-
             </div>
         )
     }

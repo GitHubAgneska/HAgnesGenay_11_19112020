@@ -1,14 +1,15 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 import Header  from './components/layout/Header'
 import Footer from './components/layout/Footer'
 import Home from './components/containers/Home'
 import NotFoundPage from './components/containers/404'
-import KasaValues from './components/containers/KasaValues'
+import About from './components/containers/About'
 import Rental from './components/containers/Rental'
 
 
-
+// each top-level feature declares its own route
+// Fragment used here because Router can't have multiple children
 class App extends Component {
 
   render() {
@@ -17,25 +18,14 @@ class App extends Component {
         <div className="container">
               <Header/>
                 <Router>
-                  <Route exact path="/" component={Home} />
-                  
-                  <Route exact path="/rental" render={props => (
-                    <React.Fragment>
-                      <Rental />
-                    </React.Fragment>
-                  )}/>
+                  <Fragment>
 
-                  <Route exact path="/values" render={props => (
-                    <React.Fragment>
-                      <KasaValues />
-                    </React.Fragment>
-                  )}/>
-                  <Route path="*" render={props => (
-                    <React.Fragment>
-                      <NotFoundPage />
-                    </React.Fragment>
-                  )}/>
+                    <Route exact path="/" component={Home} />
+                    <Route exact path="/rental" component={Rental} />
+                    <Route exact path="/about" component={About} />
+                    <Route component={NotFoundPage} />
   
+                  </Fragment>
                 </Router>
                 
               <Footer />
