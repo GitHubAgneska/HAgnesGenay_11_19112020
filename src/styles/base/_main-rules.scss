@@ -26,7 +26,7 @@ a { text-decoration: none; }
 input { border: transparent; }
 ul { margin: 0; padding: 0;}
 ul li { list-style: none; }
-button {  display: block; border: none; }
+button { display: block; border: none; }
 
 a, input, button {cursor: pointer; }
 h1,h2, h3, h4, h5, h6 { font-weight: normal;}
@@ -42,6 +42,7 @@ h1,h2, h3, h4, h5, h6 { font-weight: normal;}
     position: absolute;
     width: 1px;
 }
+
 // Fluid typography (adapts to viewport's size)
 
 @include max-600px {
@@ -65,9 +66,8 @@ h1,h2, h3, h4, h5, h6 { font-weight: normal;}
 // MARGINS L/R FOR ALL PAGES + header/footer content
 .page, .header {
     @include max-600px{margin-left: 20px; margin-right: 20px;}
-    // @include min-600px{margin-left: 20px; margin-right: 20px;}
     @include min-992px{margin-left: 100px; margin-right: 100px;}
-    }
+}
 
 // MARGIN TOP FOR EACH PAGE'S CONTENT (current, base = header's height)
 .homepage-wrapper, .aboutPage-wrapper {

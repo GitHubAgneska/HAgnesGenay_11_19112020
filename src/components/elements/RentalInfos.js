@@ -1,14 +1,15 @@
 import CollapsingBlock from '../elements/CollapsingBlock'
 import Tag from '../elements/Tag'
 import Rating from '../elements/Rating'
+import Carousel from '../elements/Carousel'
 
 const RentalInfos =  () => {
     
     return (
         <div className="rental-wrapper">
 
-            <div className="rental--pic">
-                <img src="" alt="" />
+            <div className="rental--pics">
+                <Carousel />
             </div>
 
             <div className="rental--presentation">
