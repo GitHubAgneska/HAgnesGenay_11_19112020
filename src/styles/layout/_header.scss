@@ -4,22 +4,28 @@
 
 .header-wrapper {
     position: fixed;
-    height: 110px;
-    width:100vw;
+    @include max-600px { height:70px}
+    @include min-992px {height: 110px;}
+    width:100%;
     border: 2px solid red;
     background-color: $white;
     padding-bottom: 10px;
     .header {
+        @include max-600px {margin-top: 20px;}
+        @include min-992px {margin-top: 30px;}
+
         @include flex(row, nowrap);
-        margin-top: 30px;
         justify-content: space-between;
         align-items: center;
         &__logo-wrapper {
             border: 2px solid blue;
-            @include min-1200px {
-                width: 13.125em; //240px;
+            @include max-600px {width:145px;}
+            @include min-1200px { width: 13.125em; } //240px;
+            
+            .main-logo{ 
+                max-width:100%; height: auto;
+                max-height: 4.375em; // 70px;
             }
-            .main-logo{ height: 4.375em; }// 70px;
         }
     }
 }

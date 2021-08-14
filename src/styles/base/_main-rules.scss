@@ -18,7 +18,7 @@ html {
 
 body {
     margin: 0;
-    height:100vh;
+    // height:100vh;
 }
 
 
@@ -29,7 +29,7 @@ ul li { list-style: none; }
 button {  display: block; border: none; }
 
 a, input, button {cursor: pointer; }
-h1,h2, h3,h4, h5, h6 { font-weight: normal;}
+h1,h2, h3, h4, h5, h6 { font-weight: normal;}
 
 // accessibility
 .visuallyHidden {
@@ -43,12 +43,27 @@ h1,h2, h3,h4, h5, h6 { font-weight: normal;}
     width: 1px;
 }
 
-.page { height:100vh; }
+/* COMMON RULES FOR ALL PAGES / PAGES CONTENT */
+/* ========================================== */
+.page { 
+    height:100%;
+}
+@include max-600px {
+    p, .nav-link { font-size:12px; }
+}
+@include min-992px {
+    p, .nav-link { font-size:24px; }
+}
+
 
 // MARGINS L/R FOR ALL PAGES + header/footer content
-.page, .header { margin-left: 100px; margin-right: 100px;}
+.page, .header {
+    @include max-600px{margin-left: 20px; margin-right: 20px;}
+    // @include min-600px{margin-left: 20px; margin-right: 20px;}
+    @include min-992px{margin-left: 100px; margin-right: 100px;}
+    }
 
-// MARGIN TOP FOR EACH PAGE'S CONTENT (current, base)
+// MARGIN TOP FOR EACH PAGE'S CONTENT (current, base = header's height)
 .homepage-wrapper, .aboutPage-wrapper {
     @include max-600px {margin-top: contentTopMargin(15px, 70px)}
     @include min-992px {margin-top: contentTopMargin(60px)}
