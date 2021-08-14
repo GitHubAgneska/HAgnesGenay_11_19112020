@@ -1,9 +1,0 @@
-.homepage-heroImg-wrapper {
-    @include border-radius(10px);
-    height:225px;
-    margin-top:60px;margin-bottom: 40px;
-    background-image: linear-gradient(rgba(229, 218, 151, 0.5), rgba(0, 0, 0, 0.5)),url('../../assets/imgs/heroImg.png');
-    background-position: center;
-    @include centered;
-    h1 {color: $white;}
-}

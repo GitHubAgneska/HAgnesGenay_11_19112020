@@ -1,14 +1,16 @@
 import CollapsingBlock from '../elements/CollapsingBlock'
 
 const About =  () => {
+    let sections = ['Fiabilité', 'Respect', 'Service', 'Responsabilité'];
     
     return (
-        <section className="aboutPage-wrapper">
-            <h1>nrjzflzefl</h1>
-            <div className="about-pic-wrapper"></div>
+        <section className="aboutPage-wrapper page">
+            <div className="banner-pic banner-pic__about"></div>
             <div className="about-sections">
-                <CollapsingBlock />
-                <CollapsingBlock />
+                { sections.map(i => (
+                    <CollapsingBlock key={i}/>
+                ))}
+                
             </div>
         </section>
     )

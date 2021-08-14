@@ -1,6 +1,6 @@
 export default function HomeBanner() {
     return(
-        <div className="homepage-heroImg-wrapper">
+        <div className="banner-pic banner-pic__home">
             <h1>Chez vous, partout et ailleurs</h1> 
         </div>
     )

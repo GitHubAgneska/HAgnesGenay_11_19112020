@@ -3,6 +3,19 @@
 /* Collapsing block */
 /* ================================== */
 
-.collapsBlock-wrapper {
-    
+.collapsBlock {
+    height:165px;
+    //@include max-600px { height:165px; }
+    // @include min-600px { height:165px; }
+    // @include min-600px { height:165px; }
+    &--header{
+        height: 30px;
+        background-color: $orange-main;
+        color:$white;
+    }
+    &--body{
+        height:135px;
+        background-color: $grey;
+        color:$orange-main;
+    }
 }   

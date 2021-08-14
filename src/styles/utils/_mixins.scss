@@ -158,4 +158,16 @@ $breakpoints: (xs-mobile: 375px, mobile: 600px, tablet: 768px, laptop: 992px, de
     border-radius: $pixel;
 }
 
+/* ======================================== */
+/* BANNER IMAGE */
+/* ======================================== */
+@mixin bannerImg($height, $gradient, $url, $mb ) {
+    height: $height;
+    background-image: $gradient, $url;
+    @include centered;
+    @include border-radius(10px);
+    background-position: center;
+    margin-bottom: $mb;
+}
+
 

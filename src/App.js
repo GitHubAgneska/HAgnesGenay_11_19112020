@@ -25,7 +25,7 @@ class App extends Component {
                   <Route exact path="/home" component={Home} />
                   <Route exact path="/rental" component={Rental} />
                   <Route exact path="/about" component={About} />
-                  <Route component={NotFoundPage} />
+                  {/* <Route component={NotFoundPage} /> */}
 
                 </Fragment>
               </Router>
