@@ -18,7 +18,9 @@ html {
 
 body {
     margin: 0;
+    height:100vh;
 }
+
 
 a { text-decoration: none; }
 input { border: transparent; }
@@ -29,7 +31,7 @@ button {  display: block; border: none; }
 a, input, button {cursor: pointer; }
 h1,h2, h3,h4, h5, h6 { font-weight: normal;}
 
-
+// accessibility
 .visuallyHidden {
     border: 0;
     clip: rect(0 0 0 0);
@@ -42,6 +44,27 @@ h1,h2, h3,h4, h5, h6 { font-weight: normal;}
 }
 
 
-/* MARGINS FOR ALL PAGES + header/footer content */
+// MARGINS L/R FOR ALL PAGES + header/footer content
 .page, .header { margin-left: 100px; margin-right: 100px;}
+
+// MARGIN TOP FOR EACH PAGE'S CONTENT (current, base)
+.homepage-wrapper, .aboutPage-wrapper {
+    @include max-600px {margin-top: contentTopMargin(15px, 70px)}
+    @include min-992px {margin-top: contentTopMargin(60px)}
+}
+.rentalPage-wrapper {
+    @include max-600px {margin-top: contentTopMargin(15px, 70px)}
+    @include min-992px {margin-top: contentTopMargin(20px)}
+}
+.notFoundPage-wrapper {
+    @include max-600px {margin-top: contentTopMargin(15px, 200px)}
+    @include min-992px {margin-top: contentTopMargin(200px)}
+}
+
+
+
+// main container (for all pages content) 
+.container {position: absolute; } // because of header's fixed position
+
+
 

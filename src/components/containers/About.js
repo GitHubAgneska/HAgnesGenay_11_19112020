@@ -3,7 +3,7 @@ import CollapsingBlock from '../elements/CollapsingBlock'
 const About =  () => {
     
     return (
-        <section className="about-wrapper">
+        <section className="aboutPage-wrapper">
             <h1>nrjzflzefl</h1>
             <div className="about-pic-wrapper"></div>
             <div className="about-sections">

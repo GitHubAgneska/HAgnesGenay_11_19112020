@@ -3,7 +3,7 @@ import RentalInfos from '../elements/RentalInfos'
 const Rental =  () => {
     
     return (
-        <section className="rental-wrapper">
+        <section className="rentalPage-wrapper">
             <RentalInfos />
         </section>
     )

@@ -1,4 +1,5 @@
 @import './styles/utils/variables' ;
+@import './styles/functions/content-marginTop' ;
 @import './styles/utils/mixins' ;
 @import './styles/base/main-rules' ;
 @import './styles/base/fonts';
@@ -7,5 +8,6 @@
 @import './styles/layout/nav';
 @import './styles/components/gallery';
 @import './styles/components/home-banner';
+
 
 
