@@ -5,10 +5,11 @@
 .footer-wrapper {
     height: 200px; // 13.4375em
     width:100vw;
-    background-color: black;
     @include flex(col, nowrap);
     justify-content: center;
     align-items: center;
+    background-color: black;
+    margin-top: 50px;
     
     .footer {
 

@@ -4,9 +4,9 @@
 
 .header-wrapper {
     position: fixed;
+    width:100%;
     @include max-600px { height:70px}
     @include min-992px {height: 110px;}
-    width:100%;
     border: 2px solid red;
     background-color: $white;
     padding-bottom: 10px;
@@ -17,6 +17,7 @@
         @include flex(row, nowrap);
         justify-content: space-between;
         align-items: center;
+        
         &__logo-wrapper {
             border: 2px solid blue;
             @include max-600px {width:145px;}

@@ -42,12 +42,8 @@ h1,h2, h3, h4, h5, h6 { font-weight: normal;}
     position: absolute;
     width: 1px;
 }
+// Fluid typography (adapts to viewport's size)
 
-/* COMMON RULES FOR ALL PAGES / PAGES CONTENT */
-/* ========================================== */
-.page { 
-    height:100%;
-}
 @include max-600px {
     p, .nav-link { font-size:12px; }
 }
@@ -55,6 +51,16 @@ h1,h2, h3, h4, h5, h6 { font-weight: normal;}
     p, .nav-link { font-size:24px; }
 }
 
+
+/* COMMON RULES FOR ALL PAGES / PAGES CONTENT */
+/* ========================================== */
+
+// main container (for all pages content) 
+.container {position: absolute; } // because of header's fixed position
+
+.page { 
+    height:100%;
+}
 
 // MARGINS L/R FOR ALL PAGES + header/footer content
 .page, .header {
@@ -79,8 +85,7 @@ h1,h2, h3, h4, h5, h6 { font-weight: normal;}
 
 
 
-// main container (for all pages content) 
-.container {position: absolute; } // because of header's fixed position
+
 
 
 
