@@ -1,10 +1,7 @@
 @use "sass:map";
 .tag-wrapper {
+        margin-right: 1%;
         @include main-btn;
-        padding: 0.1em 0.5em;
-        font-weight: 500;text-transform: capitalize;
-        border: 1px solid $greySpecial;
-        @include border-radius(10px);
-        @include max-1200px {margin: 1%;}
-        @include min-1200px {margin: 1%;}
+        @include border-radius(5px);
+        a { padding: 0.1em 0.5em; margin: 0.1em 1.5em;color:$white;}
 }

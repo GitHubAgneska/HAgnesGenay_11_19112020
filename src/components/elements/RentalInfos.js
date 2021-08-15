@@ -25,10 +25,8 @@ const RentalInfos =  () => {
                 </div>
 
                 <div className="rental-presentation__owner">
-                    <h3>some name</h3>
-                    <div className="owner-pic">
-                        <img src={placeholder} alt="" />
-                    </div>
+                    <h3>some <br />name</h3>
+                    <img src={placeholder} alt="" />
                 </div>
                 
                 <div className="rental-presentation__rating">

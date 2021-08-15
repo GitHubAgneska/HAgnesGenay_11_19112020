@@ -7,6 +7,8 @@ export default function Rating() {
             <img src={star} alt=""/>
             <img src={star} alt=""/>
             <img src={star} alt=""/>
+            <img src={noStar} alt=""/>
+            <img src={noStar} alt=""/>
         </div>
     )
 }
