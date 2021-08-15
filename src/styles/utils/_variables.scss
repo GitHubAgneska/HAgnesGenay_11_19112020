@@ -13,7 +13,8 @@ $grey: #F6F6F6; /* bg */
 $greySpecial: #C4C4C4; /* + */
 
 
-/* buttons  */
+// buttons
+// ======================
 $btn-palette:(
     static : (bg: $red-main, txt: $white ),
     hover: ( bg: $orange-main, txt: $dark ),
@@ -30,11 +31,12 @@ $btn-palette:(
     }
 }
 
-/* nav tag links  */
+// tag links 
+// ======================
 $tag-palette:(
-    static : (bg: $white, txt: $red-main, border: 0.5px solid $greySpecial ),
-    hover: ( bg: $red-main, txt: $white, border: none ),
-    focus: ( bg: $red-main, txt: $white, border: none )
+    static : (bg: $white, txt: $orange-main, border: 0.5px solid $grey ),
+    hover: ( bg: $orange-main, txt: $white, border: none ),
+    focus: ( bg: $orange-main, txt: $white, border: none )
 );
 
 @mixin tag-palette($palettes) {
@@ -47,3 +49,22 @@ $tag-palette:(
     }
 }
 
+/* ======================================== */
+/* FONT-SIZES */
+/* ======================================== */
+
+$font-size: (xs: 12px, s: 14px, m: 18px, l: 24px, xl: 36px, xxl:48px );
+$font-size-em: (xs: 0.75em, s: 0.875em, m: 1.125em, l: 1.5em, xl: 2.25em, xxl: 3em );
+
+@mixin font-size($font-size, $weight:400) {
+    font-size: $font-size;
+    font-weight:$weight;
+}
+
+@mixin calcResponsiveFsize($min-viewport, $min-fs, $max-viewport, $max-fs){
+    font-size: calc($min-fs + ($max-fs - $min-fs)) * ((100vw - $min-viewport) / ($max-viewport - $min-viewport));
+}
+
+@function calcResponsiveFsize($min-viewport, $min-fs, $max-viewport, $max-fs){
+    @return  calc($min-fs + ($max-fs - $min-fs)) * ((100vw - $min-viewport) / ($max-viewport - $min-viewport));
+}

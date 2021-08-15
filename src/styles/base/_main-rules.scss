@@ -44,9 +44,13 @@ h1,h2, h3, h4, h5, h6 { font-weight: normal;}
 }
 
 // Fluid typography (adapts to viewport's size)
-
+// determined for each font-size :  range =  min size to max size
 @include max-600px {
+
     p, .nav-link { font-size:12px; }
+    
+
+
 }
 @include min-992px {
     p, .nav-link { font-size:24px; }
