@@ -21,7 +21,6 @@ body {
     // height:100vh;
 }
 
-
 a { text-decoration: none; }
 input { border: transparent; }
 ul { margin: 0; padding: 0;}
@@ -29,7 +28,7 @@ ul li { list-style: none; }
 button { display: block; border: none; }
 
 a, input, button {cursor: pointer; }
-h1,h2, h3, h4, h5, h6 { font-weight: normal;}
+h1, h2, h3, h4, h5, h6 { font-weight: normal;}
 
 // accessibility
 .visuallyHidden {
@@ -43,14 +42,28 @@ h1,h2, h3, h4, h5, h6 { font-weight: normal;}
     width: 1px;
 }
 
+
+@use "sass:map";
 // Fluid typography (adapts to viewport's size)
-// determined for each font-size :  range =  min size to max size
+// for each font-size :  range =  min size to max size
+.homepage-wrapper {
+    h1 { @include calcResponsiveFsize(320px, 12px, 6vw, 48px) }
+    h2 { font-size: map-get($font-size, m); }
+}
+.rentalPage-wrapper {
+    h1 { @include calcResponsiveFsize(320px, 18px, 6vw, 38px) }
+    h2, h3 { @include font-size(map-get($font-size, m)) }
+    h4 { @include font-size(13px); }
+}
+.notFoundPage-wrapper {
+    h1 { @include calcResponsiveFsize(320px, 18px, 6vw, 36px)}
+    h2 { @include calcResponsiveFsize(320px, 14px, 6vw, 18px) }
+}
+
+
+
 @include max-600px {
-
     p, .nav-link { font-size:12px; }
-    
-
-
 }
 @include min-992px {
     p, .nav-link { font-size:24px; }

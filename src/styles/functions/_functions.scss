@@ -1,0 +1,14 @@
+/* ================================== */
+/* Functions */
+/* ================================== */
+
+// set up a margin-top for each page content
+// base min = header's height => mobile:70px / desktop:110px
+@function contentTopMargin($current, $base: 110px) {
+    @return $base + $current;
+}
+
+
+/* @function calcResponsiveFsize($min-viewport, $min-fs, $max-viewport, $max-fs){
+    @return calc($min-fs + ($max-fs - $min-fs)) * ((100vw - $min-viewport) / ($max-viewport - $min-viewport));
+} */

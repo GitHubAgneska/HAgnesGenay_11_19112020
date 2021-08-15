@@ -12,8 +12,6 @@
     &__about {
         @include bannerImg(220px,linear-gradient(rgba(229, 218, 151, 0.5), rgba(0, 0, 0, 0.5)),url('../../assets/imgs/gustavo-alves-YOXSC4zRcxw-unsplash\ 1.png'), 30px);  
     }
-    &__rental {
-        
-    }
+    &__rental { }
 
 }

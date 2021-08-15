@@ -56,15 +56,21 @@ $tag-palette:(
 $font-size: (xs: 12px, s: 14px, m: 18px, l: 24px, xl: 36px, xxl:48px );
 $font-size-em: (xs: 0.75em, s: 0.875em, m: 1.125em, l: 1.5em, xl: 2.25em, xxl: 3em );
 
-@mixin font-size($font-size, $weight:400) {
+
+@mixin font-size($font-size, $weight:500) {
     font-size: $font-size;
     font-weight:$weight;
 }
 
+// Fluid typography (adapts to viewport's size)
+// for each font-size :  range =  min size to max size
+// -------------------------------------------------------
+/* @mixin calcResponsiveFsize($min-viewport, $min-fs, $max-viewport, $max-fs){
+    font-size:calc($min-fs + ($max-fs - $min-fs)) * ((100vw - $min-viewport) / ($max-viewport - $min-viewport));
+}  ====> replaced by following syntax (sass err mix vw+px - conflict using 'calc()') */
+// clamp() = clamps a value between an upper and lower bound
 @mixin calcResponsiveFsize($min-viewport, $min-fs, $max-viewport, $max-fs){
-    font-size: calc($min-fs + ($max-fs - $min-fs)) * ((100vw - $min-viewport) / ($max-viewport - $min-viewport));
+    $clamp-size: #{'min(max(#{$max-fs}, #{$min-fs}), #{$max-viewport})'};
+    font-size: $clamp-size;
 }
 
-@function calcResponsiveFsize($min-viewport, $min-fs, $max-viewport, $max-fs){
-    @return  calc($min-fs + ($max-fs - $min-fs)) * ((100vw - $min-viewport) / ($max-viewport - $min-viewport));
-}
