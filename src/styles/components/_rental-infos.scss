@@ -1,0 +1,26 @@
+/* ================================== */
+/* Rental infos block */
+/* ================================== */
+.rental-presentation {
+    @include flex(row, wrap);
+
+    &__titles{
+        border:1px solid red;
+        height:100px;
+        @include max-600px { flex-basis:100%;}
+    }
+    &__tags-list{
+        @include flex(row, wrap);
+        border:1px solid palevioletred;
+        width: 100%;
+    }
+    &__owner { 
+        border:1px solid blue;
+        @include max-600px { flex-basis:50%;}
+    }
+    &__rating{ 
+        border:1px solid green;
+        @include max-600px { flex-basis:50%;}
+    }
+    &__description{border:1px solid grey;}
+}

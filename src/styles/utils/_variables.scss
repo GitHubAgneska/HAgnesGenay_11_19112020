@@ -13,13 +13,16 @@ $grey: #F6F6F6; /* bg */
 $greySpecial: #C4C4C4; /* + */
 
 
-// buttons
-// ======================
+// buttons (= anything clickable with orange bg + white color)
+// ============================================================
+@mixin main-btn{ background-color:$orange-main;color:$white;}
+
 $btn-palette:(
-    static : (bg: $red-main, txt: $white ),
+    static: (bg: $orange-main, txt: $white ),
     hover: ( bg: $orange-main, txt: $dark ),
     focus: ( bg: $orange-main, txt: $dark )
 );
+
 
 @mixin btn-palette($palettes) {
     @each $state, $palette in $palettes{
@@ -72,5 +75,10 @@ $font-size-em: (xs: 0.75em, s: 0.875em, m: 1.125em, l: 1.5em, xl: 2.25em, xxl: 3
 @mixin calcResponsiveFsize($min-viewport, $min-fs, $max-viewport, $max-fs){
     $clamp-size: #{'min(max(#{$max-fs}, #{$min-fs}), #{$max-viewport})'};
     font-size: $clamp-size;
+}
+
+@mixin calcResponsiveSize($min-viewport, $min-s, $max-viewport, $max-s){
+    $clamp-size: #{'min(max(#{$max-s}, #{$min-s}), #{$max-viewport})'};
+    height: $clamp-size;
 }
 

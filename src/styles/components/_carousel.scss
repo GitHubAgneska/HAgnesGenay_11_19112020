@@ -1,0 +1,16 @@
+
+/* ================================== */
+/* Carousel */
+/* ================================== */
+.carousel-wrapper {
+    border:2px solid red;
+    width:100%;
+    position: relative;
+    display: flex;
+    // @include max-600px {height:255px;}
+    // @include min-992px {height:410px;}
+    @include calcResponsiveSize(320px, 255px, 75vw, 415px);
+    &__inner {//  //contains carousel nav
+        position: absolute;
+    }
+}
