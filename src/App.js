@@ -26,6 +26,7 @@ class App extends Component {
                   <Route exact path="/rental" component={Rental} />
                   <Route exact path="/about" component={About} />
                   {/* <Route component={NotFoundPage} /> */}
+                  <Route exact path="/404" component={NotFoundPage} />
 
                 </Fragment>
               </Router>

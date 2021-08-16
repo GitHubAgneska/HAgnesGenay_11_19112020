@@ -45,6 +45,7 @@ h1, h2, h3, h4, h5, h6 { font-weight: normal;}
 
 @use "sass:map";
 // Fluid typography (adapts to viewport's size)
+/* =========================================== */
 // for each font-size :  range =  min size to max size
 .homepage-wrapper {
     h1 { @include calcResponsiveFsize(320px, 12px, 6vw, 48px) }

@@ -77,8 +77,9 @@ $font-size-em: (xs: 0.75em, s: 0.875em, m: 1.125em, l: 1.5em, xl: 2.25em, xxl: 3
     font-size: $clamp-size;
 }
 
+// fluid size => any wrapper
 @mixin calcResponsiveSize($min-viewport, $min-s, $max-viewport, $max-s){
     $clamp-size: #{'min(max(#{$max-s}, #{$min-s}), #{$max-viewport})'};
-    height: $clamp-size;
+    width: $clamp-size;
 }
 

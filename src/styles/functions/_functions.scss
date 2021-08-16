@@ -7,8 +7,3 @@
 @function contentTopMargin($current, $base: 110px) {
     @return $base + $current;
 }
-
-
-/* @function calcResponsiveFsize($min-viewport, $min-fs, $max-viewport, $max-fs){
-    @return calc($min-fs + ($max-fs - $min-fs)) * ((100vw - $min-viewport) / ($max-viewport - $min-viewport));
-} */
