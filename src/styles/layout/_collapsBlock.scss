@@ -5,17 +5,40 @@
 
 .collapsBlock {
     height:165px;
+    position: relative;
+    margin-bottom: 30px;
+    h5 { margin: 0 1%;}
+    p { margin: 0; padding: 5%;}
+
     //@include max-600px { height:165px; }
     // @include min-600px { height:165px; }
     // @include min-600px { height:165px; }
-    &--header{
+    &__header{
         height: 30px;
+        position: relative; // for caret abs positioning
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
         background-color: $orange-main;
         color:$white;
+        @include border-radius(5px);
+        @include border-radius(5px);
+        &__caret-wrapper {
+            position: absolute;
+            right:5px;
+            img { // caret
+                @include icon-base;
+                height:1em;
+                &.up { transform: rotate(180deg);} // caret points upwards when dropdown is open
+            }
+        }
     }
-    &--body{
+    &__body{
+        position: absolute;
+        width: 100%;
         height:135px;
         background-color: $grey;
         color:$orange-main;
+        @include border-radius(5px);
     }
 }   

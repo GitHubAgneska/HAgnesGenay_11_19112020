@@ -157,6 +157,13 @@ $breakpoints: (xs-mobile: 375px, mobile: 600px, tablet: 768px, laptop: 992px, de
 @mixin border-radius($pixel...) {
     border-radius: $pixel;
 }
+@mixin border-radius-sides($pixel, $u-l) { // ----- TO REVIEW
+    border-top-right-radius: $pixel;
+    border-top-left-radius: $pixel;
+    border-bottom-right-radius: $pixel;
+    border-bottom-left-radius: $pixel;
+}
+
 
 /* ======================================== */
 /* BANNER IMAGE */
