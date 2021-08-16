@@ -3,11 +3,15 @@
 /* ================================== */
 .rental-presentation {
 
-    @include max-600px { // mobile only => owner infos come last 
+    @include flex(row, wrap);
+    @include max-992px { // up to desktop => owner infos come last 
         [class^=rental-presentation__]:nth-of-type(3){ order:4;}
     }
-    @include flex(row, wrap);
-    
+/*     
+    @include min-992px { // from desktop => owner infos come top right
+        [class^=rental-presentation__]:nth-of-type(3){ order:2;}
+} */
+
     border:5px solid red;
 
     &__titles{
@@ -28,27 +32,25 @@
         border:1px solid blue;
         @include flex(row, nowrap);
         justify-content:flex-end;
-        height: 50px;;
-        @include max-600px {flex-basis:50%;}
-        @include min-600px {height:80px;}
+        align-items: center;
+        height: 50px;
+
+        @include max-992px {flex-basis:50%; min-width: 50%;}
+        @include min-992px {height:80px;flex-basis:25%; min-width: 25%;}
         img { 
             @include border-radius(50%);
             @include max-600px {height:30px;}
             height:100%;
+            margin: 1%;
         }
     }
     &__rating{ 
         border:1px solid green;
         @include flex(row, nowrap);
         justify-content:space-evenly; align-items: center;
-        @include min-600px { 
-            width:200px; height:50px;
-            img { width: 20%;}
-        }
-        @include max-600px {
-            flex-basis:50%;
-            img { width: 10%;}
-        }
+        @include min-992px { width:200px; height:50px;}
+        @include max-992px { flex-basis:50%;  img { width: 5%;}}
+        img { width: 10%;}
     }
     &__description{border:1px solid grey;}
 }

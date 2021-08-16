@@ -14,7 +14,7 @@ const RentalInfos =  () => {
 
             <div className="rental-presentation">
                 <div className="rental-presentation__titles">
-                    <h1>SOME TITLE</h1>
+                    <h1>Some title for presentation</h1>
                     <h2>some location</h2>
                 </div>
 
@@ -32,6 +32,7 @@ const RentalInfos =  () => {
                 <div className="rental-presentation__rating">
                     <Rating />
                 </div>
+                
             </div>
 
             <div className="rental-presentation__description">
