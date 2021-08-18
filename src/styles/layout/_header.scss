@@ -3,7 +3,7 @@
 /* ================================== */
 
 .header-wrapper {
-    position: fixed;
+    position: fixed; z-index: 2;
     width:100%;
     @include max-600px { height:70px}
     @include min-992px {height: 110px;}
