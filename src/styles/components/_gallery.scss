@@ -12,6 +12,7 @@
             margin-bottom:5%;
             overflow: hidden;
             @include border-radius(10px);
+
             @include max-600px {
                 flex-basis:100%;
                 
@@ -44,7 +45,10 @@
                         object-fit: cover;
                         overflow: hidden;
                     }
-                    figcaption { position: absolute; margin: -10% 5%; }
+                    figcaption { 
+                        position: absolute; bottom: 20px;left:15px; 
+                        color:$white;font-weight: 500;
+                        text-shadow:2px 2px 4px #000000;}
                 }
             }            
         }

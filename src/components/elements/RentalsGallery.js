@@ -20,7 +20,7 @@ const Gallery = () =>  {
         fetch(myRequest)
         .then(response => {
             if (response.ok) { return response.json() } throw response })
-        .then(data => { setData(data);console.log(data) })
+        .then(data => { setData(data);/* console.log(data) */ })
         .catch(error => {
             console.error('Error fetching data:', error);
             setError(error);
@@ -28,35 +28,20 @@ const Gallery = () =>  {
         .finally(()=> { setLoading(false)})
     }, [])
     
-    console.log('DATA==',data);
+    // console.log('DATA==',data);
     if (loading) return 'Loading..';
     if (error) return 'Error!';
     
     return (
         <div className="gallery-wrapper">
             <ul>
-                {data.map(i => (
+                {data?data.map(i => (
                     <GalleryItem  key = {i.id} rental= {i} />
-                ))}
+                )):(loading)}
             </ul>
         </div>
     )
-/*     return (data? data.map((rentalObject) => (
-        
-        <GalleryItem  key={rentalObject.id}  rental = {rentalObject} />
-
-    )) : (loading)) */
 }
 
 export default Gallery
 
-
-/* 
-<section id="gallery" className="gallery-wrapper" aria-label="rentals gallery">
-<ul>
-    <li>
-    </li>
-    <li></li>
-    <li></li>
-</ul>
-</section> */
