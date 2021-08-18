@@ -33,12 +33,13 @@ const Gallery = () =>  {
     if (error) return 'Error!';
     
     return (
-        <ul>
-            {data.map(i => (
-                <GalleryItem  key = {i.id} rental= {i} />
-            ))}
-        </ul>
-
+        <div className="gallery-wrapper">
+            <ul>
+                {data.map(i => (
+                    <GalleryItem  key = {i.id} rental= {i} />
+                ))}
+            </ul>
+        </div>
     )
 /*     return (data? data.map((rentalObject) => (
         
