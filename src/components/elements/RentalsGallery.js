@@ -33,8 +33,11 @@ const Gallery = () =>  {
     if (error) return 'Error!';
     
     return (
-        
-        <GalleryItem  rentals= {data} />
+        <ul>
+            {data.map(i => (
+                <GalleryItem  key = {i.id} rental= {i} />
+            ))}
+        </ul>
 
     )
 /*     return (data? data.map((rentalObject) => (

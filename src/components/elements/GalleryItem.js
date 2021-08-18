@@ -1,20 +1,13 @@
 
 
-export const GalleryItem =({rentals}) =>  {
-
-        const title = rentals[0].title;
-        const cover = rentals[1].cover;
+export const GalleryItem =({rental}) =>  {
         
         return  (
             
             <figure className="galleryItem" onClick="goTo">
-
-                <img src={cover} alt="" />
-
-                <figcaption>{title}</figcaption>
-                
+                <img src={rental.cover} alt="" />
+                <figcaption>{rental.title}</figcaption>
             </figure>
 
-            )
-    
+        ) 
 }
