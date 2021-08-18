@@ -1,17 +1,20 @@
-import React, { Component } from 'react'
 
 
-export class GalleryItem extends Component {
-    onClick() {
+export const GalleryItem =({rentals}) =>  {
+
+        const title = rentals[0].title;
+        const cover = rentals[1].cover;
         
-    }
-    render() {
-        return (
+        return  (
+            
             <figure className="galleryItem" onClick="goTo">
-                <img src="" alt="" />
-                <figcaption></figcaption>
+
+                <img src={cover} alt="" />
+
+                <figcaption>{title}</figcaption>
+                
             </figure>
 
-        )
-    }
+            )
+    
 }
