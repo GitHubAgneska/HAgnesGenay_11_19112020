@@ -41,8 +41,8 @@ const RentalInfos =  ({cover, title,location, pictures, description, hostName, h
             </div>
 
             <div className="rental-presentation__description">
-                <CollapsingBlock />
-                <CollapsingBlock />
+                <CollapsingBlock description={description} />
+                <CollapsingBlock  equipment={equipment} />
             </div>
         </div>
     )
