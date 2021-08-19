@@ -22,9 +22,11 @@ const RentalInfos =  ({cover, title,location, pictures, description, hostName, h
                 </div>
 
                 <div className="rental-presentation__tags-list">
-                    <Tag />
-                    <Tag />
-                    <Tag />
+                    <ul>
+                        {tags.map(i => (
+                            <li key={i}><Tag tag={i} className="tag-wrapper"/></li>
+                        ))}
+                    </ul>
                 </div>
 
                 <div className="rental-presentation__owner">
@@ -33,7 +35,7 @@ const RentalInfos =  ({cover, title,location, pictures, description, hostName, h
                 </div>
                 
                 <div className="rental-presentation__rating">
-                    <Rating />
+                    <Rating rating={rating}/>
                 </div>
                 
             </div>

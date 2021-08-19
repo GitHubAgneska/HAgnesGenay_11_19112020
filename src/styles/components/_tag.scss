@@ -8,5 +8,5 @@
         margin: 0 1% 1% 0;
         @include main-btn;
         @include border-radius(5px);
-        a { padding: 0.1em 0.5em; margin: 0.1em 1.5em;color:$white;}
+        a .tag { padding: 0.1em 0.5em; margin: 0.1em 1.5em;color:$white;}
 }

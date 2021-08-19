@@ -22,11 +22,14 @@
     }
     &__tags-list{
         border:2px solid black;
-        @include flex(row, wrap);
+        // @include flex(row, wrap);
         @include max-600px { min-height:20px;} // -- TO REVIEW: height should be able to expand (if many tags)
         @include min-600px {  min-height:25px;}
         border:1px solid rgb(253, 248, 250);
         width: 100%;
+        ul {
+            @include flex(row, wrap);
+        }
     }
     &__owner { 
         border:1px solid blue;

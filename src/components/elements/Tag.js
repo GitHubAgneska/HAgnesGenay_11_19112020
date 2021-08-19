@@ -1,7 +1,14 @@
-export default function Tag() {
+import { Fragment } from "react"
+import PropTypes from "prop-types";
+
+export default function Tag({tag}) {
     return(
-        <div className="tag-wrapper">
-            <a href="/" id="" className="tag"  tabIndex="0">some tag</a>
-        </div>
+        <Fragment>
+            <a href="/" id="" className="tag" tabIndex="0">{tag}</a>
+        </Fragment>
     )
+}
+
+Tag.protoTypes = {
+    tag: PropTypes.string
 }

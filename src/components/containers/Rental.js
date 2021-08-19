@@ -43,8 +43,8 @@ const Rental =  ({match: {params : { id}}}) => {
                 setLocation(rental.location);
                 setPictures(rental.pictures);
                 setDescription(rental.description);
-                setHostName(rental.hostName);
-                setHostPicture(rental.hostPicture);
+                setHostName(rental.host.name);
+                setHostPicture(rental.host.picture);
                 setRating(rental.rating);
                 setEquipment(rental.equipment);
                 setTags(rental.tags);
