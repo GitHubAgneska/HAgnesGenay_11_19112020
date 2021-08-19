@@ -38,6 +38,7 @@
     ]
   },
   "devDependencies": {
+    "prop-types": "^15.7.2",
     "sass-loader": "^10.2.0"
   }
 }

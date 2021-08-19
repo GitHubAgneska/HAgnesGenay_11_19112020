@@ -2,9 +2,12 @@ import CollapsingBlock from '../elements/CollapsingBlock'
 import Tag from '../elements/Tag'
 import Rating from '../elements/Rating'
 import Carousel from '../elements/Carousel'
+import PropTypes from "prop-types";
 
-const RentalInfos =  () => {
-    let placeholder='https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/profile-picture-12.jpg'
+const RentalInfos =  ({cover, title,location, pictures, description, hostName, hostPicture, rating, equipment, tags }) => {
+
+   /*  let placeholder='https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/profile-picture-12.jpg' */
+    
     return (
         <div className="rental-wrapper">
 
@@ -14,8 +17,8 @@ const RentalInfos =  () => {
 
             <div className="rental-presentation">
                 <div className="rental-presentation__titles">
-                    <h1>Some title for presentation</h1>
-                    <h2>some location</h2>
+                    <h1>{title}</h1>
+                    <h2>{location}</h2>
                 </div>
 
                 <div className="rental-presentation__tags-list">
@@ -25,8 +28,8 @@ const RentalInfos =  () => {
                 </div>
 
                 <div className="rental-presentation__owner">
-                    <h3>some <br />name</h3>
-                    <img src={placeholder} alt="" />
+                    <h3>{hostName}</h3>
+                    <img src={hostPicture} alt={hostName} />
                 </div>
                 
                 <div className="rental-presentation__rating">
@@ -41,5 +44,18 @@ const RentalInfos =  () => {
             </div>
         </div>
     )
+}
+
+RentalInfos.propTypes = { 
+    cover: PropTypes.string,
+    title: PropTypes.string,
+    location: PropTypes.string,
+    pictures: PropTypes.array,
+    description: PropTypes.string,
+    hostName: PropTypes.string,
+    hostPicture: PropTypes.string,
+    rating: PropTypes.string,
+    equipment: PropTypes.array,
+    tags: PropTypes.array
 }
 export default RentalInfos
