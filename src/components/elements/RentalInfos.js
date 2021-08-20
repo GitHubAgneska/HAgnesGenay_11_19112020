@@ -7,12 +7,14 @@ import PropTypes from "prop-types";
 const RentalInfos =  ({cover, title,location, pictures, description, hostName, hostPicture, rating, equipment, tags }) => {
 
    /*  let placeholder='https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/profile-picture-12.jpg' */
-    
+    console.log(pictures)
+    console.log('rating==', rating)
+    console.log('title==', title)
     return (
         <div className="rental-wrapper">
 
             <div className="rental--pics">
-                <Carousel />
+                {/* <Carousel pics={pictures}/> */}
             </div>
 
             <div className="rental-presentation">

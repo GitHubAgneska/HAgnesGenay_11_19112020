@@ -1,32 +1,42 @@
+import { Component } from "react";
 import PropTypes from "prop-types";
 import star  from '../../assets/logos/star.png'
 import noStar from '../../assets/logos/noStar.png'
 
-let stars = [];
-export function rate(n){
-    for ( let i = 0; i < parseInt(n); i++ ) {
-        console.log('parseInt({rating})==', parseInt(n))
-        stars.push(i)
-        /* stars.push(<img src={star} key={i} alt="" />) */
+
+class Rating extends Component {
+
+    constructor(props) {
+        super(props);
+        this.rate = this.rate.bind(this)
     }
-    for ( let j = parseInt(n); j < 5; j++ ) {
-        stars.push(j)
-        /* stars.push(<img src={noStar} key={j}  alt="" />) */
+
+    rate(rating){
+        
+        let stars = [];
+        let n = parseInt(rating);
+        console.log('N==', n);
+        let m = 5 - n;
+        try {
+            stars.push([...Array(n)].map((e, i) => 
+                <img src={star} key={i} alt="" />
+            )
+            .concat([...Array(m)].map((e, j) =>
+                <img src={noStar} key={Math.random()}  alt="" />
+            )));
+            console.log('Array==',stars);
+            return stars;
+        }
+        catch(error) {console.log(error)}
     }
-}
 
-export default function Rating({rating}) {
-
-/*     let starsCount = parseInt({rating}); console.log(starsCount)
-    let noStarCount = 5 - parseInt({rating}); 
-*/ 
-    rate({rating});
-    console.log('STARS==', stars)
-
-    return <div className="rating">{stars}</div>
-    
+    render(){
+            return (<div className="rating">{this.props.rating?this.rate(this.props.rating):'LOADING'}</div>)
+    }
 }
 
 Rating.protoTypes = {
     rating: PropTypes.string
 }
+
+export default Rating

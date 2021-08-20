@@ -12,5 +12,9 @@
     @include calcResponsiveSize(320px, 255px, 75vw, 415px);
     &__inner {//  //contains carousel nav
         position: absolute;
+
+        .carousel-img{
+            width:100%;
+        }
     }
 }
