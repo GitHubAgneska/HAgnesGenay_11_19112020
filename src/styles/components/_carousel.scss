@@ -3,8 +3,11 @@
 /* Carousel */
 /* ================================== */
 .carousel-wrapper {
+    width: 100%;
+    overflow: hidden;
+    object-fit: contain;
+    height: 300px;
     border:2px solid red;
-    width:100%;
     position: relative;
     display: flex;
     // @include max-600px {height:255px;}

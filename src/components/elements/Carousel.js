@@ -6,10 +6,10 @@ class Carousel extends Component {
     constructor(props){
         super(props);
         this.setupCarousel = this.setupCarousel.bind(this);
+        this.carouselPics = [];
     }
     
-
-    componentDidUpdate(){
+    componentDidUpdate(){        
         console.log('HERE:',this.props.pictures)
     }
 
@@ -46,10 +46,14 @@ class Carousel extends Component {
                         <div className="carousel-img" key={index}>
                             <img src={img} alt="" />
                         </div>
-                    )):'loading'}
+                    )):
+                    <div className="carousel-img" key={Math.random()}>
+                        <img src={this.props.cover} alt="" />
+                    </div>
+                    }
                 </div>
                 <div className="controls-wrapper">
-                  {/*   <div className="prev" onClick={(e) => { addSlide(-1); setChange(!change) }}>&#10094;</div>
+                {/*   <div className="prev" onClick={(e) => { addSlide(-1); setChange(!change) }}>&#10094;</div>
                     <div className="next" onClick={(e) => { addSlide(1); setChange(!change) }}>&#10095;</div> */}
                 </div>
             </section>
