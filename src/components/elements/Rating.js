@@ -8,14 +8,14 @@ class Rating extends Component {
 
     constructor(props) {
         super(props);
-        this.rate = this.rate.bind(this)
+        this.rate = this.rate.bind(this);
     }
 
     rate(rating){
         
         let stars = [];
         let n = parseInt(rating);
-        console.log('N==', n);
+       /*  console.log('N==', n); */
         let m = 5 - n;
         try {
             stars.push([...Array(n)].map((e, i) => 
@@ -24,7 +24,7 @@ class Rating extends Component {
             .concat([...Array(m)].map((e, j) =>
                 <img src={noStar} key={Math.random()}  alt="" />
             )));
-            console.log('Array==',stars);
+            /* console.log('Array==',stars); */
             return stars;
         }
         catch(error) {console.log(error)}
