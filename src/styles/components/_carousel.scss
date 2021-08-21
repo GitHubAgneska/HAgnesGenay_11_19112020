@@ -12,16 +12,31 @@
     display: flex;
     // @include max-600px {height:255px;}
     // @include min-992px {height:410px;}
-    @include calcResponsiveSize(320px, 255px, 75vw, 415px);
+
+    // @include calcResponsiveSize(320px, 255px, 75vw, 415px);
     &__inner {//  //contains carousel nav
         position: absolute;
-
-        .carousel-img{
-            border:5px solid blue;
+        width: 100%;height:100%;
+        .carousel-img {
+            // border:5px solid blue;
             width:100%;
             display: inline-flex;
             justify-content: center;
             align-items: center;
+            position: absolute; z-index:4;
+        }
+        .controls-wrapper { 
+            height:100%;
+            width: 100%;
+            position: absolute; z-index:5;
+            // border:4px solid yellow;
+            @include flex(col, nowrap);
+            justify-content: space-between;
+            align-items: center;
+            .control {
+                font-size:2em;padding: 3%;
+                &:hover {color: #ffff;  }
+            }
         }
     }
 }

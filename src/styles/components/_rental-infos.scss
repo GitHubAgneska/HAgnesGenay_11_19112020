@@ -1,6 +1,11 @@
 /* ================================== */
 /* Rental infos block */
 /* ================================== */
+.rental-wrapper {
+    .rental--pics {
+        
+    }
+}
 .rental-presentation {
 
     @include flex(row, wrap);

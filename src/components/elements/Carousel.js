@@ -1,13 +1,27 @@
 import React from 'react';
 import CarouselItem from './CarouselItem';
+import { useState } from 'react';
 
+const Carousel = (props) => {
+    const [activeIndex, setActiveIndex] = useState(0);
+    
+    const updateIndex = (newIndex) => {
+        if ( newIndex < 0 ) { newIndex = 0; }
+        else if (newIndex > (props.pictures).length ){
+            newIndex = (props.pictures).length - 1;
+        }
+        setActiveIndex(newIndex);
+    }
 
-const Carousel = (props) => { 
     return (
         <div className="carousel-wrapper">
             <div className="carousel-wrapper__inner">
+                <div className="controls-wrapper">
+                    <div className="control prev" onClick={() => { updateIndex(activeIndex - 1) }}>&#10094;</div>
+                    <div className="control next" onClick={() => { updateIndex(activeIndex + 1) }}>&#10095;</div>
+                </div>
                 {props.pictures.map((pic) => (
-                    <CarouselItem pic={pic} />
+                    <CarouselItem pic={pic} key={Math.random()} style={{transform:`translateX(-${activeIndex * 100}%)`}} />
                 ))}
             </div>
         </div>
