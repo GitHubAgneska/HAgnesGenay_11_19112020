@@ -2,6 +2,7 @@ import CollapsingBlock from '../elements/CollapsingBlock'
 import Tag from '../elements/Tag'
 import Rating from '../elements/Rating'
 import Carousel from '../elements/Carousel'
+import CarouselItem from '../elements/CarouselItem'
 import PropTypes from "prop-types";
 
 const RentalInfos =  ({cover, title,location, pictures, description, hostName, hostPicture, rating, equipment, tags }) => {
@@ -16,7 +17,8 @@ const RentalInfos =  ({cover, title,location, pictures, description, hostName, h
         <div className="rental-wrapper">
 
             <div className="rental--pics">
-                <Carousel pictures={pictures} cover={cover}/>
+                <Carousel pictures={pictures} cover={cover}>                
+                </ Carousel>
             </div>
 
             <div className="rental-presentation">

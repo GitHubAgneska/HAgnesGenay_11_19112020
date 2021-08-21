@@ -1,40 +1,56 @@
-import React, { Component } from 'react';
-import PropTypes from "prop-types";
+import React from 'react';
+import CarouselItem from './CarouselItem';
 
 
-class Carousel extends Component {
+const Carousel = (props) => { 
+    return (
+        <div className="carousel-wrapper">
+            <div className="carousel-wrapper__inner">
+                {props.pictures.map((pic) => (
+                    <CarouselItem pic={pic} />
+                ))}
+            </div>
+        </div>
+    )
+}
+export default Carousel
+
+
+// note - it is possible to pass event handlers from parent to child
+// to keep the child stateless (as much as possible) : 
+// passed in props if class-based component / as arguments if functional component
+/* class Carousel extends Component {
     constructor(props){
         super(props);
         this.setupCarousel = this.setupCarousel.bind(this);
-        this.carouselPics = [];
-    }
-    
-    componentDidUpdate(){        
-        console.log('HERE:',this.props.pictures)
+        this.state = {
+            pics: [],
+            activeIndex: 0
+        }
     }
 
-    setupCarousel(slide){
-        //Function to change slide
-       /*  let addSlide = (n) => {
-            if (slide + n >= pics.length)
-            setSlide(0);
-            else if (slide + n < 0)
-            setSlide(pics.length - 1);
-            else
-            setSlide(slide + n);
+    
+    componentDidUpdate(){  // runs after the component output has been rendered to the DOM
+        console.log('HERE:',this.props.pictures);
+    }
+
+    setupCarousel(){
+
+        let pics = (this.props.pictures);
+        let slides = document.getElementsByClassName("carousel-img");
+
+        let changeSlide = (n) => {
+
+            if (slides[i] + n >= pics.length) setSlide(0);
+            else if (slide + n < 0) setSlide(pics.length - 1);
+            else setSlide(slide + n);
         }
         
-        useEffect(() => {
-            
-            let slides = document.getElementsByClassName("carousel-item");
-            let slideIndex = slide;
-            try {
-                for (let i = 0; i < pics.length; i++) { slides[i].style.display = "none";}
-                if (slides[slideIndex] !== undefined) slides[slideIndex].style.display = "block";
-            }
-            catch(error) { console.log(error);}
-            
-        }, [slide]); */
+        try {
+            for (let i = 0; i < pics.length; i++) { slides[i].style.display = "none";}
+            if (slides[slideIndex] !== undefined) slides[slideIndex].style.display = "block";
+        }
+        catch(error) { console.log(error);}
     }
         
 
@@ -53,8 +69,8 @@ class Carousel extends Component {
                     }
                 </div>
                 <div className="controls-wrapper">
-                {/*   <div className="prev" onClick={(e) => { addSlide(-1); setChange(!change) }}>&#10094;</div>
-                    <div className="next" onClick={(e) => { addSlide(1); setChange(!change) }}>&#10095;</div> */}
+                    <div className="prev" onClick={(e) => { addSlide(-1); setChange(!change) }}>&#10094;</div>
+                    <div className="next" onClick={(e) => { addSlide(1); setChange(!change) }}>&#10095;</div>
                 </div>
             </section>
         )
@@ -64,4 +80,4 @@ Carousel.propTypes = {
     pictures: PropTypes.array
 }
 
-export default Carousel
+export default Carousel */
