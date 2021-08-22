@@ -39,6 +39,7 @@
   },
   "devDependencies": {
     "@types/prop-types": "^15.7.4",
+    "@types/react": "^17.0.19",
     "sass-loader": "^10.2.0"
   }
 }
