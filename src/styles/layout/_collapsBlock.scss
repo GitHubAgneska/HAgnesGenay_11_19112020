@@ -36,13 +36,16 @@
         transition: height 0.8s;
         opacity: 0;
         &--active { // block is open
-            height:135px; transition: all 0.5s;
+            min-height:135px; transition: all 0.5s;
             width: 100%;
             background-color: $grey;
             color:$orange-main;
             @include border-radius(5px);
             p {  opacity: 1;
                 transition: opacity 1.5s;}
+            ul { padding: 1%;
+                li { p { padding: 1%; }}
+            }
         }
     }
 }   

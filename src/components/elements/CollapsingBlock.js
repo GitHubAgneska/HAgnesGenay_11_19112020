@@ -2,18 +2,21 @@ import { Component } from "react";
 import PropTypes from "prop-types";
 import caret_down from '../../assets/logos/caret_down.png'
 
-let blockTitle = 'placeholder'
-let blockContent = 'Lorem ipsum dolor si amet'
-
 // using class based component here, for it needs its own state
 // and has event handlers
 class CollapsingBlock extends Component  {
 
     constructor(props) {
         super(props);
-        this.state = { blockDisplay: false };
-        /* binding event to class */
-        this.toggle = this.toggle.bind(this);
+
+        // const {blockContent, setBlockContent} = props;
+       //  setBlockContent(blockContent, this.props.blockContent)
+        this.state = { blockDisplay: false};
+        this.toggle = this.toggle.bind(this); /* binding event to constructor */
+        
+    /*  if ( props.isArray()){ console.log('IS ARRAY')}
+        else { console.log('IS STRING')} */
+        // let blockContent
     }
 
     toggle(){
@@ -21,10 +24,11 @@ class CollapsingBlock extends Component  {
     }
     
     render() {
+        
         return (
             <div className="collapsBlock collapsBlock-wrapper">
                 <div className="collapsBlock__header">
-                    <h5>{blockTitle}</h5>
+                    <h5>{this.props.blockTitle}</h5>
                     <div className="collapsBlock__header__caret-wrapper">
                         <img src={caret_down} alt="caret logo open" onClick={this.toggle}></img>
                     </div>
@@ -32,12 +36,17 @@ class CollapsingBlock extends Component  {
 
                 {this.state.blockDisplay?(
                     <div className="collapsBlock__body--active">
-                        <p>{this.props.description}</p>
+                        { this.props.description ? ( <p>{this.props.description}</p> ):
+                        
+                        this.props.equipments?(
+                            <ul>
+                                {this.props.equipments.map((item) => (
+                                    <li key={Math.random()} item={item}><p>{item}</p></li> ))}
+                            </ul>
+                        ):(null) }
                     </div>
                 ):( 
-                    <div className="collapsBlock__body">
-
-                    </div>
+                    <div className="collapsBlock__body"></div> // necessary for css transition
                 )}
             </div>
         )
@@ -45,11 +54,12 @@ class CollapsingBlock extends Component  {
 }
 
 CollapsingBlock.propTypes = {
-    /* coming from rentalInfos component */ 
+    blockContent: PropTypes.string,
+    blockTitle: PropTypes.string,
+
     description: PropTypes.string,
-    equipment: PropTypes.array,
-    /* coming from about component */ 
-    content: PropTypes.string
+    equipment: PropTypes.array
+
 }
 
 export default CollapsingBlock

@@ -28,7 +28,7 @@ const Rental =  ({match: {params : { id}}}) => {
     const [ hostName, setHostName] = useState();
     const [ hostPicture, setHostPicture] = useState();
     const [ rating, setRating] = useState();
-    const [ equipment, setEquipment] = useState([]);
+    const [ equipments, setEquipment] = useState([]);
     const [ tags, setTags] = useState([]);
     
     useEffect(()=> {
@@ -46,7 +46,7 @@ const Rental =  ({match: {params : { id}}}) => {
                 setHostName(rental.host.name);
                 setHostPicture(rental.host.picture);
                 setRating(rental.rating);
-                setEquipment(rental.equipment);
+                setEquipment(rental.equipments);
                 setTags(rental.tags);
             })
             .catch(error => {
@@ -59,7 +59,7 @@ const Rental =  ({match: {params : { id}}}) => {
     
     return (
         <section className="rentalPage-wrapper page">
-            <RentalInfos {...{cover, title,location, pictures, description, hostName, hostPicture, rating, equipment, tags }} />
+            <RentalInfos {...{cover, title,location, pictures, description, hostName, hostPicture, rating, equipments, tags }} />
         </section>
     )
 }
