@@ -1,11 +1,9 @@
 import { Component } from "react";
 import PropTypes from "prop-types";
 import caret_down from '../../assets/logos/caret_down.png'
-/* import caret_up from '../../assets/logos/caret_up.png' */
 
 let blockTitle = 'placeholder'
 let blockContent = 'Lorem ipsum dolor si amet'
-
 
 // using class based component here, for it needs its own state
 // and has event handlers
@@ -31,13 +29,14 @@ class CollapsingBlock extends Component  {
                         <img src={caret_down} alt="caret logo open" onClick={this.toggle}></img>
                     </div>
                 </div>
-                <div className="collapsBlock__body">
-                    <p> {!this.state.blockDisplay && this.props.description}</p>
-                </div>
-                
+
+                {this.state.blockDisplay?(
+                    <div className="collapsBlock__body--active">
+                        <p>{this.props.description}</p>
+                    </div>
+                ):( null )}
             </div>
         )
-
     }
 }
 
