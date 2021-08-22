@@ -34,7 +34,11 @@ class CollapsingBlock extends Component  {
                     <div className="collapsBlock__body--active">
                         <p>{this.props.description}</p>
                     </div>
-                ):( null )}
+                ):( 
+                    <div className="collapsBlock__body">
+
+                    </div>
+                )}
             </div>
         )
     }
