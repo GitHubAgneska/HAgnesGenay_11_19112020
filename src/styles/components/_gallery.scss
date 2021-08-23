@@ -7,9 +7,10 @@
     ul { 
         @include flex(row, wrap);
         justify-content: space-between;
+        padding: 5%;
         //  &::after {content:''; flex:auto;} => reset space before last li element ( created by flex )
         li { 
-            border: 2px solid blue;
+            // border: 2px solid blue;
             margin-bottom:5%;
             overflow: hidden;
             @include border-radius(10px);
