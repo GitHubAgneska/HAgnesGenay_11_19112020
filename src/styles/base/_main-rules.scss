@@ -82,9 +82,7 @@ h1, h2, h3, h4, h5, h6 { font-weight: normal;}
 // main container (for all pages content) 
 .container {position: absolute; } // because of header's fixed position
 
-.page { 
-    height:100%;
-}
+.page {height:100%;}
 
 // MARGINS L/R FOR ALL PAGES + header/footer content
 .page, .header {
@@ -94,11 +92,11 @@ h1, h2, h3, h4, h5, h6 { font-weight: normal;}
 
 // MARGIN TOP FOR EACH PAGE'S CONTENT (current, base = header's height)
 .homepage-wrapper, .aboutPage-wrapper {
-    @include max-600px {margin-top: contentTopMargin(15px, 70px)}
+    @include max-600px {margin-top: contentTopMargin(15px, 85px)}
     @include min-992px {margin-top: contentTopMargin(60px)}
 }
 .rentalPage-wrapper {
-    @include max-600px {margin-top: contentTopMargin(15px, 70px)}
+    @include max-600px {margin-top: contentTopMargin(15px, 85px)}
     @include min-992px {margin-top: contentTopMargin(20px)}
 }
 .notFoundPage-wrapper {

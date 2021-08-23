@@ -5,8 +5,8 @@
 .header-wrapper {
     position: fixed; z-index: 2;
     width:100%;
-    @include max-600px { height:70px}
-    @include min-992px {height: 110px;}
+    //@include max-600px { height:70px}
+    // @include min-992px {height: 110px;}
     border: 2px solid red;
     background-color: $white;
     padding-bottom: 10px;
