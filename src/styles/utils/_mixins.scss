@@ -149,6 +149,13 @@ $breakpoints: (xs-mobile: 375px, mobile: 600px, tablet: 768px, laptop: 992px, de
     flex-flow: $dir $wraptype;
 }
 
+@mixin flexCenterAll{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
 
 /* ======================================== */
 /* BORDER-RADIUS */

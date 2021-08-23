@@ -1,12 +1,13 @@
 @use "sass:map";
-.tag-wrapper {
-        height: 20px;
-        display: flex;
-        align-content: center;
-        justify-content: center;
-        align-items: center;
-        margin: 0 1% 1% 0;
-        @include main-btn;
-        @include border-radius(5px);
-        a .tag { padding: 0.1em 0.5em; margin: 0.1em 1.5em;color:$white;}
+.tag-wrapper { // ul
+        margin: 1.5% auto;
+        li { 
+                min-width: 100px;
+                height: 20px;
+                margin: 0 1% 1% 0;
+                padding: 0.1em 0.5em;                 
+                @include flexCenterAll;
+                @include border-radius(5px);
+                @include main-btn;
+        }
 }
