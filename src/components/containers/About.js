@@ -8,7 +8,7 @@ const About =  () => {
             <div className="banner-pic banner-pic__about"></div>
             <div className="about-sections">
                 { sections.map(i => (
-                    <CollapsingBlock key={i}/>
+                    <CollapsingBlock key={i} blockTitle={i} description="lorem ipsum"/>
                 ))}
                 
             </div>
