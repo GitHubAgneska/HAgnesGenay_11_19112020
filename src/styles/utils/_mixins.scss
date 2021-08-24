@@ -180,6 +180,8 @@ $breakpoints: (xs-mobile: 375px, mobile: 600px, tablet: 768px, laptop: 992px, de
     @include centered;
     @include border-radius(10px);
     background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
     margin-bottom: $mb;
 }
 

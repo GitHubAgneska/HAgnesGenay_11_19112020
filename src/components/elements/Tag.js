@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 export default function Tag({tag}) {
     return(
         <Fragment>
-            <p>{tag}</p>
+            <p className="tag-text">{tag}</p>
         </Fragment>
     )
 }

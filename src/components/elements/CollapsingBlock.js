@@ -28,7 +28,7 @@ class CollapsingBlock extends Component  {
         return (
             <div className="collapsBlock collapsBlock-wrapper">
                 <div className="collapsBlock__header">
-                    <h5>{this.props.blockTitle}</h5>
+                    <h4>{this.props.blockTitle}</h4>
                     <div className="collapsBlock__header__caret-wrapper">
                         <img src={caret_down} alt="caret logo open" onClick={this.toggle}></img>
                     </div>
