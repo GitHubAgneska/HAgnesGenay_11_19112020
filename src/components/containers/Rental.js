@@ -1,7 +1,7 @@
 import RentalInfos from '../elements/RentalInfos'
-import React, {useEffect, useState, Fragment } from 'react';
+import React, {useEffect, useState} from 'react';
 import PropTypes from "prop-types";
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import { Route } from 'react-router-dom'
 import NotFoundPage from './404'
 
 
@@ -19,11 +19,7 @@ const myRequest = new Request( apiUrl, {
 const Rental =  ({match: {params : {id}}}) => {
 
     const [ loading, setLoading ] = useState(true);
-    const [ error, setError ] = useState(null);
-
-    const [mounted, setMounted] = useState(false);
-    const [dataRetrieved, setDataRetrieved] = useState(false);
-
+    const [ error, setError ] = useState(false);
     
     const [ cover, setCover ] = useState();
     const [ title, setTitle ] = useState();
@@ -38,16 +34,13 @@ const Rental =  ({match: {params : {id}}}) => {
 
 
     useEffect(()=> {
+        // fetch(myRequest)
         fetch(myRequest, {id})
             .then(response => {
-                console.log(response.status)
                 if (response.ok) { return response.json() } throw response })
             .then(data => {
+
                 let rental = data.filter(rental => rental.id === id )[0]; // ! filter returns ARRAY
-                // console.log('rental==', rental);
-                if (!rental) { return <Route component={NotFoundPage} />}
-                else {
-                
                     setCover(rental.cover);
                     setTitle(rental.title);
                     setLocation(rental.location);
@@ -59,33 +52,23 @@ const Rental =  ({match: {params : {id}}}) => {
                     setEquipment(rental.equipments);
                     setTags(rental.tags);
 
-                    setDataRetrieved(true);
-
-                }
+                    setLoading(false); 
             })
             .catch(error => {
-                console.error('Error fetching data:', error);
-                setError(error);
+                // console.error('Error fetching data:', error);
+                setError(true);
             })
-            .finally(()=> { setLoading(false);})
+            .finally(()=> { setLoading(false); })
     }, [id]);
 
-    if (!mounted) { /* meaning data was not retrieved : id in url = incorrect */
-        setInterval(() => { <Route component={NotFoundPage} />}, 2000)
-    }
 
     return (
-        <Fragment>
-            { dataRetrieved && 
-                <section className="rentalPage-wrapper page">
-                    <RentalInfos {...{cover, title,location, pictures, description, hostName, hostPicture, rating, equipments, tags }} />
-                </section> 
-            }
-            { !dataRetrieved && setInterval(() => { <Route component={NotFoundPage} />}, 2000)
-            }
 
-
-        </Fragment>
+        error === false?
+            <section className="rentalPage-wrapper page">
+                <RentalInfos {...{loading, cover, title,location, pictures, description, hostName, hostPicture, rating, equipments, tags }} /> 
+            </section>
+        : <Route component={NotFoundPage} />
     )
 }
 
