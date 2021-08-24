@@ -8,10 +8,11 @@
         @include flex(row, wrap);
         justify-content: space-between;
         padding: 5%;
-        //  &::after {content:''; flex:auto;} => reset space before last li element ( created by flex )
-        li { 
+        &::after {content:''; flex:auto;} // => reset space before last li element ( created by flex )
+        @include min-600px {li:last-child {margin-left: 5%;} } // => compensate empty space left by  ::after
+        
+        li {
             // border: 2px solid blue;
-
             @include max-600px { flex-basis:100%;}
             @include min-600px { flex-basis:30%; }
 
