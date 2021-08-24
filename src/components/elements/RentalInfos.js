@@ -4,7 +4,9 @@ import Rating from '../elements/Rating'
 import Carousel from '../elements/Carousel'
 import PropTypes from "prop-types"
 
+
 const RentalInfos =  ({cover, title,location, pictures, description, hostName, hostPicture, rating, equipments, tags }) => {
+
 
     return (
         <div className="rental-wrapper">

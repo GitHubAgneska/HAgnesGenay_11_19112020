@@ -23,7 +23,7 @@ class CollapsingBlock extends React.Component  {
     
     toggle(){ 
         this.setState((currentState) => ({ blockDisplay: !currentState.blockDisplay}));
-        this.blockRef.current.scrollIntoView();
+        this.blockRef.current.scrollIntoView({ behavior: 'smooth' });
     }
 
     

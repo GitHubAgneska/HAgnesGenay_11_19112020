@@ -8,11 +8,13 @@
     // height:165px;
     position: relative;
     margin-bottom: 30px;
-    h4 { margin: 0 1%;}
+    h4 { margin: 0 5%;}
     p { margin: 0; padding: 5%;}
 
     &__header{
-        height: 30px;
+        @include max-600px {height: 30px;}
+        @include min-600px {height: 45px; }
+        
         position: relative; // for caret abs positioning
         display: flex;
         align-items: center;
@@ -23,7 +25,7 @@
 
         &__caret-wrapper {
             position: absolute;
-            right:5px;
+            right:5%;
             img { // caret
                 @include icon-base;
                 height:1em;
