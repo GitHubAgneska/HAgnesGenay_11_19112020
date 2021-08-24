@@ -1,36 +1,40 @@
-import { Component } from "react";
+import  React from "react";
 import PropTypes from "prop-types";
 import caret_down from '../../assets/logos/caret_down.png'
 
 // using class based component here, for it needs its own state
 // and has event handlers
-class CollapsingBlock extends Component  {
+class CollapsingBlock extends React.Component  {
 
     constructor(props) {
         super(props);
 
-        // const {blockContent, setBlockContent} = props;
-       //  setBlockContent(blockContent, this.props.blockContent)
+        // Here : ideally, block content passed as prop by parent(s)
+        // issue : might be array or string depending on parent -
+            // const {blockContent, setBlockContent} = props;
+            // setBlockContent(blockContent, this.props.blockContent)
+            /*  if ( props.isArray()){ console.log('IS ARRAY')}
+            else { console.log('IS STRING')} */
+        
         this.state = { blockDisplay: false};
         this.toggle = this.toggle.bind(this); /* binding event to constructor */
-        
-    /*  if ( props.isArray()){ console.log('IS ARRAY')}
-        else { console.log('IS STRING')} */
-        // let blockContent
+        this.blockRef = React.createRef();
+    }
+    
+    toggle(){ 
+        this.setState((currentState) => ({ blockDisplay: !currentState.blockDisplay}));
+        this.blockRef.current.scrollIntoView();
     }
 
-    toggle(){
-        this.setState((currentState) => ({ blockDisplay: !currentState.blockDisplay}))
-    }
     
     render() {
         
         return (
-            <div className="collapsBlock collapsBlock-wrapper">
+            <div ref={this.blockRef} className="collapsBlock collapsBlock-wrapper">
                 <div className="collapsBlock__header">
                     <h4>{this.props.blockTitle}</h4>
                     <div className="collapsBlock__header__caret-wrapper">
-                        <img src={caret_down} alt="caret logo open" onClick={this.toggle}></img>
+                        <img className = {this.state.blockDisplay? 'up': null} src={caret_down} alt="caret logo open" onClick={this.toggle}></img>
                     </div>
                 </div>
 
@@ -44,6 +48,7 @@ class CollapsingBlock extends Component  {
                                     <li key={Math.random()} item={item}><p>{item}</p></li> ))}
                             </ul>
                         ):(null) }
+
                     </div>
                 ):( 
                     <div className="collapsBlock__body"></div> // necessary for css transition

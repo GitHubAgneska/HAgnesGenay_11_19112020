@@ -27,6 +27,7 @@
             img { // caret
                 @include icon-base;
                 height:1em;
+                transition: transform 0.2s;
                 &.up { transform: rotate(180deg);} // caret points upwards when dropdown is open
             }
         }
@@ -34,6 +35,7 @@
     &__body{
         height:0;
         transition: height 0.8s;
+        transition: opacity 0.5s;
         opacity: 0;
         &--active { // block is open
             min-height:135px; transition: all 0.5s;
@@ -41,8 +43,7 @@
             background-color: $grey;
             color:$orange-main;
             @include border-radius(5px);
-            p {  opacity: 1;
-                transition: opacity 1.5s;}
+            p {  opacity: 1; transition: opacity 1.5s;}
             ul { padding: 1%;
                 li { p { padding: 1%; }}
             }
