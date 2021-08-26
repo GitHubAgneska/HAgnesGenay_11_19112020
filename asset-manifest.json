@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/GitHubAgneska/HAgnesGenay_11_19112020/static/css/main.5e743558.chunk.css",
-    "main.js": "/GitHubAgneska/HAgnesGenay_11_19112020/static/js/main.cc474c97.chunk.js",
-    "main.js.map": "/GitHubAgneska/HAgnesGenay_11_19112020/static/js/main.cc474c97.chunk.js.map",
-    "runtime-main.js": "/GitHubAgneska/HAgnesGenay_11_19112020/static/js/runtime-main.c3a3b5e8.js",
-    "runtime-main.js.map": "/GitHubAgneska/HAgnesGenay_11_19112020/static/js/runtime-main.c3a3b5e8.js.map",
-    "static/js/2.1fbf3660.chunk.js": "/GitHubAgneska/HAgnesGenay_11_19112020/static/js/2.1fbf3660.chunk.js",
-    "static/js/2.1fbf3660.chunk.js.map": "/GitHubAgneska/HAgnesGenay_11_19112020/static/js/2.1fbf3660.chunk.js.map",
-    "static/js/3.ff313a8b.chunk.js": "/GitHubAgneska/HAgnesGenay_11_19112020/static/js/3.ff313a8b.chunk.js",
-    "static/js/3.ff313a8b.chunk.js.map": "/GitHubAgneska/HAgnesGenay_11_19112020/static/js/3.ff313a8b.chunk.js.map",
-    "index.html": "/GitHubAgneska/HAgnesGenay_11_19112020/index.html",
-    "static/css/main.5e743558.chunk.css.map": "/GitHubAgneska/HAgnesGenay_11_19112020/static/css/main.5e743558.chunk.css.map",
-    "static/js/2.1fbf3660.chunk.js.LICENSE.txt": "/GitHubAgneska/HAgnesGenay_11_19112020/static/js/2.1fbf3660.chunk.js.LICENSE.txt",
-    "static/media/index.scss": "/GitHubAgneska/HAgnesGenay_11_19112020/static/media/montserrat-regular.841bbdde.woff",
-    "static/media/notFound.9fa66fd8.png": "/GitHubAgneska/HAgnesGenay_11_19112020/static/media/notFound.9fa66fd8.png"
+    "main.css": "/GitHubAgneska/HAgnesGenay_11_19112020/home/static/css/main.0a60e84d.chunk.css",
+    "main.js": "/GitHubAgneska/HAgnesGenay_11_19112020/home/static/js/main.cc474c97.chunk.js",
+    "main.js.map": "/GitHubAgneska/HAgnesGenay_11_19112020/home/static/js/main.cc474c97.chunk.js.map",
+    "runtime-main.js": "/GitHubAgneska/HAgnesGenay_11_19112020/home/static/js/runtime-main.9a79de11.js",
+    "runtime-main.js.map": "/GitHubAgneska/HAgnesGenay_11_19112020/home/static/js/runtime-main.9a79de11.js.map",
+    "static/js/2.1fbf3660.chunk.js": "/GitHubAgneska/HAgnesGenay_11_19112020/home/static/js/2.1fbf3660.chunk.js",
+    "static/js/2.1fbf3660.chunk.js.map": "/GitHubAgneska/HAgnesGenay_11_19112020/home/static/js/2.1fbf3660.chunk.js.map",
+    "static/js/3.ff313a8b.chunk.js": "/GitHubAgneska/HAgnesGenay_11_19112020/home/static/js/3.ff313a8b.chunk.js",
+    "static/js/3.ff313a8b.chunk.js.map": "/GitHubAgneska/HAgnesGenay_11_19112020/home/static/js/3.ff313a8b.chunk.js.map",
+    "index.html": "/GitHubAgneska/HAgnesGenay_11_19112020/home/index.html",
+    "static/css/main.0a60e84d.chunk.css.map": "/GitHubAgneska/HAgnesGenay_11_19112020/home/static/css/main.0a60e84d.chunk.css.map",
+    "static/js/2.1fbf3660.chunk.js.LICENSE.txt": "/GitHubAgneska/HAgnesGenay_11_19112020/home/static/js/2.1fbf3660.chunk.js.LICENSE.txt",
+    "static/media/index.scss": "/GitHubAgneska/HAgnesGenay_11_19112020/home/static/media/montserrat-regular.841bbdde.woff",
+    "static/media/notFound.9fa66fd8.png": "/GitHubAgneska/HAgnesGenay_11_19112020/home/static/media/notFound.9fa66fd8.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.c3a3b5e8.js",
+    "static/js/runtime-main.9a79de11.js",
     "static/js/2.1fbf3660.chunk.js",
-    "static/css/main.5e743558.chunk.css",
+    "static/css/main.0a60e84d.chunk.css",
     "static/js/main.cc474c97.chunk.js"
   ]
 }
