@@ -11,33 +11,69 @@ const myRequest = new Request( apiUrl, {
     credentials: 'include'
 });
 
+
 const Gallery = () =>  {
     const [ data, setData ] = useState([]);
     const [ loading, setLoading ] = useState(true);
     const [ error, setError ] = useState(null);
+    
+    /* adressing issue of gallery images 'content reflow' (due to server's pictures' size) */
+    /* using Promise.all  => not enough : issue does not come from fetching the urls but from browser loading */
+    /* const fetchAllImgs = async () => {
+        let response = await fetch(myRequest);
+        
+        if (response.ok) { 
+            const jsonResponse = await response.json();
+            console.log('jsonResponse==', jsonResponse); // array of objects
+            
+            let dataImgs = jsonResponse.map( async i => {
+                // console.log(i);
+                let preFetchData =  await fetch(i.cover);
+                return preFetchData;
+            })
+            let covers = await Promise.all(dataImgs);
+            let allUrls = ( await Promise.all(covers)).map(cover => {
+                
+                return cover = cover.url;
+            })
+            console.log(allUrls)
+            setData(allUrls);
+        }
+    }
+    fetchAllImgs();
+    setLoading(false); */
 
     useEffect(()=> {
+        
         fetch(myRequest)
-        .then(response => {
-            if (response.ok) { return response.json() } throw response })
-        .then(data => { setData(data);/* console.log(data) */ })
-        .catch(error => {
-            console.error('Error fetching data:', error);
-            setError(error);
-        })
-        .finally(()=> { setLoading(false)})
-    }, [])
+            .then(response => {
+                if (response.ok) { return response.json() } throw response })
+            .then(data => {
+
+                /* limit images size */
+                /* data.forEach(item => { 
+                    return item.cover=item.cover+`?size=50`; }) */
+                    /* console.log(data) */    
+                setData(data); })
+            .catch(error => {
+                console.error('Error fetching data:', error);
+                setError(error);
+            })
+            .finally(()=> { setLoading(false)})
+        }
+    , [])
     
     // console.log('DATA==',data);
     if (loading) return 'Loading..';
     if (error) return 'Error!';
     
     return (
+
         <div className="gallery-wrapper">
             <ul>
-                {data?data.map(i => (
-                    <GalleryItem  key = {i.id} rental= {i} />
-                )):(loading)}
+                { data.length > 0 ? data.map(i => (
+                    <GalleryItem key = {i} rental= {i} />
+                )): loading}
             </ul>
         </div>
     )

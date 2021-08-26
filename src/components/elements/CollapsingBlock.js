@@ -18,7 +18,7 @@ class CollapsingBlock extends React.Component  {
         
         this.state = { blockDisplay: false};
         this.toggle = this.toggle.bind(this); /* binding event to constructor */
-        this.blockRef = React.createRef();
+        this.blockRef = React.createRef(); /* create anchor to dom element */
     }
     
     toggle(){ 
