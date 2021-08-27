@@ -3,7 +3,7 @@ import notFound from "../../assets/imgs/notFound.png"
 import { Link } from 'react-router-dom';
 
 
-class NotFoundPage extends React.Component {
+export default class NotFoundPage extends React.Component {
 
     render() {
 
@@ -18,5 +18,3 @@ class NotFoundPage extends React.Component {
         )
     }
 }
-
-export default NotFoundPage

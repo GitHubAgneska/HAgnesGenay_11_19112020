@@ -3,7 +3,7 @@ import CollapsingBlock from '../elements/CollapsingBlock'
 import about from '../../data/about.json';
 
 
-class About extends React.Component {
+export default class About extends React.Component {
     render() {
         return (
             <section className="aboutPage-wrapper page">
@@ -18,5 +18,3 @@ class About extends React.Component {
         )
     }
 }
-
-export default About

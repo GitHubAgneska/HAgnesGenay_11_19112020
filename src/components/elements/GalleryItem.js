@@ -1,24 +1,37 @@
-import { useHistory } from "react-router-dom";
 import React from 'react';
+import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 
-export const GalleryItem =({rental}) =>  {
+export class GalleryItem extends React.Component  {
+    constructor(props) {
+        super(props);
+        this.path = "/rental/" + this.props.rental.id;
+        // this.handleClick = this.handleClick.bind(this);
+        // console.log('THIS PATH=', this.path);
+    }
 
-    const history = useHistory();
-    function handleClick(id) { history.push("/rental/"+id); console.log(id)}
-    /* const [ imgLoaded, setImgLoaded ] = useState(false); */
-
-    /* better alternative to event handler :  binding event in class constructor */
-    /*  ( -> to avoid multi rendering of a different callback everytime the event is called )*/
-    /* about event handling of stateless components :  */
-    /* https://stackoverflow.com/questions/39260595/event-handlers-in-react-stateless-components */
-        
+    // handleClick(id) { this.props.history.push("/rental/"+id); console.log(id)}
+    render() {
         return  (
-            <li onClick={() => handleClick(rental.id)}>
-                <figure className="galleryItem">
-                    <img src={rental.cover} alt="" />
-                    {/* <img src={rental.cover} alt="" className={imgLoaded? 'loading': null} onLoad={() =>setImgLoaded(true)}/> */}
-                    <figcaption>{rental.title}</figcaption>
-                </figure>
+            <li>
+                <Link to={this.path}>
+
+                {/* <li onClick={() => this.handleClick(this.props.id)}> */}
+                    <figure className="galleryItem">
+                        <img src={this.props.rental.cover} alt="" />
+                        <figcaption>{this.props.rental.title}</figcaption>
+                    </figure>
+
+                </Link>
             </li>
         ) 
+    }
 }
+GalleryItem.propTypes = {
+    id: PropTypes.number,
+    cover: PropTypes.string,
+    title: PropTypes.string
+}
+
+export default GalleryItem
+

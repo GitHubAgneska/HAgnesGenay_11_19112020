@@ -1,16 +1,18 @@
-import { Fragment } from "react"
+import React, { Fragment } from "react"
 import PropTypes from "prop-types";
 
-const Tag = ({tag}) => {
-    return(
-        <Fragment>
-            <p className="tag-text">{tag}</p>
-        </Fragment>
-    )
+export default class Tag extends React.Component {
+
+    render() {
+        return(
+            <Fragment>
+                <p className="tag-text">{this.props.tag}</p>
+            </Fragment>
+        )
+    }
 }
 
 Tag.protoTypes = {
     tag: PropTypes.string
 }
 
-export default Tag

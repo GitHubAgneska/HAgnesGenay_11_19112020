@@ -1,5 +1,5 @@
+import React from 'react';
 import RentalInfos from '../elements/RentalInfos'
-import React, {useEffect, useState} from 'react';
 import PropTypes from "prop-types";
 import { Route } from 'react-router-dom'
 import NotFoundPage from './404'
@@ -16,8 +16,7 @@ const myRequest = new Request( apiUrl, {
 });
 
 
-
-class Rental extends React.Component {
+export default class Rental extends React.Component {
     
     constructor(props){
         super(props);
@@ -82,4 +81,3 @@ class Rental extends React.Component {
 
 Rental.propTypes = { match: PropTypes.object.isRequired }
 
-export default Rental

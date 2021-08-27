@@ -1,6 +1,8 @@
 import  logo_white  from '../../assets/logos/logo_white.png'
+import React from 'react';
 
-const Footer = () =>{
+export default class Footer extends React.Component {
+    render() {
         return(
             <div className="footer-wrapper">
                 <footer id="footer" className="footer" role="contentinfo">
@@ -13,5 +15,5 @@ const Footer = () =>{
                 </footer>
             </div>
         )
+    }
 }
-export default Footer

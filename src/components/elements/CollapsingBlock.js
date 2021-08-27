@@ -2,9 +2,8 @@ import  React from "react";
 import PropTypes from "prop-types";
 import caret_down from '../../assets/logos/caret_down.png'
 
-// using class based component here, for it needs its own state
-// and has event handlers
-class CollapsingBlock extends React.Component  {
+
+export default class CollapsingBlock extends React.Component  {
 
     constructor(props) {
         super(props);
@@ -64,7 +63,4 @@ CollapsingBlock.propTypes = {
 
     description: PropTypes.string,
     equipment: PropTypes.array
-
 }
-
-export default CollapsingBlock

@@ -4,7 +4,7 @@ import star  from '../../assets/logos/star.png'
 import noStar from '../../assets/logos/noStar.png'
 
 
-class Rating extends Component {
+export default class Rating extends Component {
 
     constructor(props) {
         super(props);
@@ -38,5 +38,3 @@ class Rating extends Component {
 Rating.protoTypes = {
     rating: PropTypes.string
 }
-
-export default Rating

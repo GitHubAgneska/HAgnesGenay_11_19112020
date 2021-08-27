@@ -2,7 +2,7 @@ import React , {Suspense} from 'react'
 import HomeBanner from '../elements/HomeBanner'
 import Gallery from '../elements/RentalsGallery'
 
-class Home extends React.Component {
+export default class Home extends React.Component {
     render() {
         return (
             <div id="homepage" className="homepage-wrapper page">
@@ -14,5 +14,3 @@ class Home extends React.Component {
         )
     }
 }
-
-export default Home

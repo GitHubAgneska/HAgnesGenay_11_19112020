@@ -1,9 +1,10 @@
+import React from 'react';
 import Nav from '../elements/Nav'
 import  logo from '../../assets/logos/logo.png'
 
 
-const Header =() => {
-
+export default class Header extends React.Component {
+    render() {
         return (
             <div id="header-wrapper" className="header-wrapper">
                 <header id="header" className="header" role="banner">
@@ -16,6 +17,6 @@ const Header =() => {
                 </header>
             </div>
         )
+    }
 }
 
-export default Header
