@@ -1,4 +1,3 @@
-import { Component } from 'react';
 import  logo_white  from '../../assets/logos/logo_white.png'
 
 const Footer = () =>{
