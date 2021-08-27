@@ -72,7 +72,7 @@ const Gallery = () =>  {
         <div className="gallery-wrapper">
             <ul>
                 { data.length > 0 ? data.map(i => (
-                    <GalleryItem key = {i} rental= {i} />
+                    <GalleryItem key = {Math.random()} rental= {i} />
                 )): loading}
             </ul>
         </div>
