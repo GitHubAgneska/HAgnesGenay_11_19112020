@@ -17,7 +17,7 @@ const Gallery = () =>  {
     const [ loading, setLoading ] = useState(true);
     const [ error, setError ] = useState(null);
     
-    /* adressing issue of gallery images 'content reflow' (due to server's pictures' size) */
+    /* adressing issue of gallery images 'content reflow' (due to server's pictures' size and images loading in each child unsynchronously) */
     /* using Promise.all  => not enough : issue does not come from fetching the urls but from browser loading */
     /* const fetchAllImgs = async () => {
         let response = await fetch(myRequest);
@@ -41,7 +41,16 @@ const Gallery = () =>  {
         }
     }
     fetchAllImgs();
-    setLoading(false); */
+    setLoading(false); 
+    */
+
+
+    /* 
+        useEffect(fn, []) HOOK  : replicates 'componentDidMount' where :
+                'fn' = function to run upon rendering, 
+                and [] = array of objects for which the comp will RE-render if and ONLY IF one value HAS CHANGED since previous render
+                if none : useEffect() runs once, on 1st mount
+    */
 
     useEffect(()=> {
         
