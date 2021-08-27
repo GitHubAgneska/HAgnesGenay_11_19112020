@@ -65,8 +65,8 @@ h1, h2, h3, h4, h5, h6 { font-weight: 500;}
     p { @include calcResponsiveFsize(320px, 12px, 2.5vw, 24px) }
 }
 
-@include max-600px { p.tag-text, .nav-link { font-size:12px; } }
-@include min-992px { p.tag-text, .nav-link { font-size:24px; } }
+@include max-600px { .footer__credentials p, p.tag-text, .nav-link { font-size:12px; } }
+@include min-992px { .footer__credentials p, p.tag-text, .nav-link { font-size:24px; } }
 
 
 /* COMMON RULES FOR ALL PAGES / PAGES CONTENT */

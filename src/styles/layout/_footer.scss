@@ -15,7 +15,8 @@
 
         &__logo-wrapper {
             margin:auto;
-            width:130px;
+            @include max-600px { width: 120px;}
+            @include min-600px { width:130px;}
             height:40px;
             img { max-width: 100%;}
         }
