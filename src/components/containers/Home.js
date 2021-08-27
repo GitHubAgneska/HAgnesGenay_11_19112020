@@ -3,19 +3,16 @@ import HomeBanner from '../elements/HomeBanner'
 import Gallery from '../elements/RentalsGallery'
 
 
-export class Home extends React.Component {
+const Home = () => {
     
-    render() {
-
         return (
             <div id="homepage" className="homepage-wrapper page">
                 <HomeBanner />
-                < Suspense fallback={"loading.."}>
+                <Suspense fallback={"loading.."}>
                     <Gallery />
                 </Suspense>
             </div>
         )
-    }
 }
 
 

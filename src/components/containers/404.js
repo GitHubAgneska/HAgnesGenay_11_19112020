@@ -1,7 +1,7 @@
 import notFound from "../../assets/imgs/notFound.png"
 import { Link } from 'react-router-dom';
 
-const NotFoundPage =  () => {
+const NotFoundPage = () => {
     
     return (
         <section className="notFoundPage-wrapper page">

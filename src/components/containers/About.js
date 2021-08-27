@@ -1,7 +1,7 @@
 import CollapsingBlock from '../elements/CollapsingBlock'
 import about from '../../data/about.json';
 
-const About =  () => {
+const About = () => {
 
     return (
         <section className="aboutPage-wrapper page">
