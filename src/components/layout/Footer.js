@@ -1,8 +1,7 @@
 import { Component } from 'react';
 import  logo_white  from '../../assets/logos/logo_white.png'
 
-export class Footer extends Component {
-    render() {
+const Footer = () =>{
         return(
             <div className="footer-wrapper">
                 <footer id="footer" className="footer" role="contentinfo">
@@ -15,6 +14,5 @@ export class Footer extends Component {
                 </footer>
             </div>
         )
-    }
 }
 export default Footer

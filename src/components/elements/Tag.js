@@ -1,7 +1,7 @@
 import { Fragment } from "react"
 import PropTypes from "prop-types";
 
-export default function Tag({tag}) {
+const Tag = ({tag}) => {
     return(
         <Fragment>
             <p className="tag-text">{tag}</p>
@@ -12,3 +12,5 @@ export default function Tag({tag}) {
 Tag.protoTypes = {
     tag: PropTypes.string
 }
+
+export default Tag
