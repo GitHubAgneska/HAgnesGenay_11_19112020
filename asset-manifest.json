@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/GitHubAgneska/HAgnesGenay_11_19112020/static/css/main.ce43d125.chunk.css",
-    "main.js": "/GitHubAgneska/HAgnesGenay_11_19112020/static/js/main.b3850610.chunk.js",
-    "main.js.map": "/GitHubAgneska/HAgnesGenay_11_19112020/static/js/main.b3850610.chunk.js.map",
-    "runtime-main.js": "/GitHubAgneska/HAgnesGenay_11_19112020/static/js/runtime-main.e9ea5d0a.js",
-    "runtime-main.js.map": "/GitHubAgneska/HAgnesGenay_11_19112020/static/js/runtime-main.e9ea5d0a.js.map",
-    "static/js/2.66e155bd.chunk.js": "/GitHubAgneska/HAgnesGenay_11_19112020/static/js/2.66e155bd.chunk.js",
-    "static/js/2.66e155bd.chunk.js.map": "/GitHubAgneska/HAgnesGenay_11_19112020/static/js/2.66e155bd.chunk.js.map",
-    "static/js/3.c9ff2a03.chunk.js": "/GitHubAgneska/HAgnesGenay_11_19112020/static/js/3.c9ff2a03.chunk.js",
-    "static/js/3.c9ff2a03.chunk.js.map": "/GitHubAgneska/HAgnesGenay_11_19112020/static/js/3.c9ff2a03.chunk.js.map",
-    "index.html": "/GitHubAgneska/HAgnesGenay_11_19112020/index.html",
-    "static/css/main.ce43d125.chunk.css.map": "/GitHubAgneska/HAgnesGenay_11_19112020/static/css/main.ce43d125.chunk.css.map",
-    "static/js/2.66e155bd.chunk.js.LICENSE.txt": "/GitHubAgneska/HAgnesGenay_11_19112020/static/js/2.66e155bd.chunk.js.LICENSE.txt",
-    "static/media/index.scss": "/GitHubAgneska/HAgnesGenay_11_19112020/static/media/montserrat-regular.841bbdde.woff",
-    "static/media/notFound.9fa66fd8.png": "/GitHubAgneska/HAgnesGenay_11_19112020/static/media/notFound.9fa66fd8.png"
+    "main.css": "./static/css/main.5ad41b5f.chunk.css",
+    "main.js": "./static/js/main.b3850610.chunk.js",
+    "main.js.map": "./static/js/main.b3850610.chunk.js.map",
+    "runtime-main.js": "./static/js/runtime-main.f705ac69.js",
+    "runtime-main.js.map": "./static/js/runtime-main.f705ac69.js.map",
+    "static/js/2.66e155bd.chunk.js": "./static/js/2.66e155bd.chunk.js",
+    "static/js/2.66e155bd.chunk.js.map": "./static/js/2.66e155bd.chunk.js.map",
+    "static/js/3.c9ff2a03.chunk.js": "./static/js/3.c9ff2a03.chunk.js",
+    "static/js/3.c9ff2a03.chunk.js.map": "./static/js/3.c9ff2a03.chunk.js.map",
+    "index.html": "./index.html",
+    "static/css/main.5ad41b5f.chunk.css.map": "./static/css/main.5ad41b5f.chunk.css.map",
+    "static/js/2.66e155bd.chunk.js.LICENSE.txt": "./static/js/2.66e155bd.chunk.js.LICENSE.txt",
+    "static/media/index.scss": "./static/media/montserrat-regular.841bbdde.woff",
+    "static/media/notFound.9fa66fd8.png": "./static/media/notFound.9fa66fd8.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.e9ea5d0a.js",
+    "static/js/runtime-main.f705ac69.js",
     "static/js/2.66e155bd.chunk.js",
-    "static/css/main.ce43d125.chunk.css",
+    "static/css/main.5ad41b5f.chunk.css",
     "static/js/main.b3850610.chunk.js"
   ]
 }
