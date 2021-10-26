@@ -1,6 +1,7 @@
 import React, {Fragment } from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
-import Header  from './components/layout/Header'
+import { HashRouter as Router, Route, Switch } from 'react-router-dom'
+/* import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+ */import Header  from './components/layout/Header'
 import Footer from './components/layout/Footer'
 import Home from './components/containers/Home'
 import NotFoundPage from './components/containers/404'
@@ -16,9 +17,9 @@ const App = () =>  {
     return (
       <div className="App">
         <div className="container">
-              <Header/>
               
               <Router>
+              <Header/>
                 <Fragment>
                   <ScrollToTop />
                   <Switch>
@@ -29,9 +30,9 @@ const App = () =>  {
                     <Route component={NotFoundPage} />
                   </Switch>
                 </Fragment>
+              <Footer />
               </Router>
       
-              <Footer />
         </div>
       </div>
     );
