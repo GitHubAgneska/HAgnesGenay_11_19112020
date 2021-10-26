@@ -1,6 +1,14 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Kasa",
+  "name": "Kasa, Home anywhere",
+  "icons": [
+    {
+      "src": "/imgs/house-200.png",
+      "type": "image/png",
+      "sizes": "200x200"
+    }
+  ],
+
   "start_url": ".",
   "display": "standalone",
   "theme_color": "#000000",
