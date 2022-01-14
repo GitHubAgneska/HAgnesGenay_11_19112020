@@ -3,17 +3,18 @@
   "homepage": ".",
   "version": "0.1.0",
   "private": true,
+  "proxy": "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/Front-End+V2/P9+React+1/logements.json",
   "dependencies": {
-    "@testing-library/jest-dom": "^5.11.4",
-    "@testing-library/react": "^11.1.0",
-    "@testing-library/user-event": "^12.1.10",
+    "@types/prop-types": "^15.7.4",
+    "@types/react": "^17.0.38",
+    "@types/react-router-dom": "^5.3.2",
     "gh-pages": "^3.2.3",
-    "node-sass": "^6.0.1",
+    "node-sass": "^7.0.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "^4.0.3",
-    "web-vitals": "^1.0.1"
+    "react-scripts": "^5.0.0",
+    "sass-loader": "^12.4.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -40,11 +41,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "@types/prop-types": "^15.7.4",
-    "@types/react": "^17.0.19",
-    "@types/react-router-dom": "^5.1.8",
-    "sass-loader": "^10.2.0"
   }
 }
