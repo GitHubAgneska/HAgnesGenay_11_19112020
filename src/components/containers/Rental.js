@@ -13,7 +13,8 @@ const myRequest = new Request( apiUrl, {
     headers: myHeaders,
     mode: 'cors', //  mode: 'no-cors' ? 
     cache: 'default',
-    credentials: 'include'
+    credentials: 'include',
+    
 });
 
 const Rental =  ({match: {params : {id}}}) => {
